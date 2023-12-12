@@ -7,6 +7,9 @@ vim.filetype.add({
       vim.bo.commentstring = "// %s"
       return "cue"
     end,
-    tf = "tf",
+    tf = function()
+      vim.bo.commentstring = "# %s"
+      return "tf"
+    end,
   },
 })
