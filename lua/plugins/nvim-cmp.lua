@@ -3,7 +3,11 @@ return {
   dependencies = {
     {
       "Saecki/crates.nvim",
-      enabled = false,
+      -- enabled = false,
+      event = { "BufRead Cargo.toml" },
+      opts = {
+        max_parallel_requests = 20,
+      },
     },
   },
 }
